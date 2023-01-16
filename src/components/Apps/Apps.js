@@ -6,8 +6,9 @@ const Apps = ({ isDark }) => {
   const [width, setWidth] = useState(0);
   const carousel = useRef();
   useEffect(() => {
-    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+    setWidth(carousel.current.scrollWidth / 1.1 - carousel.current.offsetWidth);
   }, []);
+  console.log(width);
   return (
     <div id="apps" className={`${isDark ? "dark-mode-apps" : null}`}>
       <h2 className="apps-head">Who's using Deja Vue.js?</h2>
